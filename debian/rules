@@ -1,0 +1,17 @@
+#!/usr/bin/make -f
+
+export PYBUILD_NAME=testrepository
+export PYBUILD_DISABLE=test
+
+%:
+	dh $@ --with python3 --buildsystem=pybuild
+
+override_dh_installchangelogs:
+	dh_installchangelogs -k NEWS
+
+override_dh_auto_install:
+	dh_auto_install
+
+override_dh_clean:
+	dh_clean
+	rm -rf build .testrepository Makefile dist

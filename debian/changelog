@@ -1,0 +1,189 @@
+testrepository (0.0.20-6) unstable; urgency=low
+
+  [ Debian Janitor ]
+  * Bump debhelper from old 10 to 12.
+  * Set upstream metadata fields: Repository, Repository-Browse.
+
+  [ Ondřej Nový ]
+  * d/control: Update Maintainer field with new Debian Python Team
+    contact address.
+  * d/control: Update Vcs-* fields with new Debian Python Team Salsa
+    layout.
+
+  [ Debian Janitor ]
+  * Re-export upstream signing key without extra signatures.
+  * Update renamed lintian tag names in lintian overrides.
+
+ -- Sandro Tosi <morph@debian.org>  Thu, 16 Sep 2021 23:17:05 -0400
+
+testrepository (0.0.20-5) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * Use debhelper-compat instead of debian/compat.
+
+  [ Thomas Goirand ]
+  * Uploading to unstable.
+
+ -- Thomas Goirand <zigo@debian.org>  Mon, 02 Sep 2019 16:28:59 +0200
+
+testrepository (0.0.20-4) experimental; urgency=medium
+
+  [ Mattia Rizzolo ]
+  * Remove Robert Collins from uploaders, as he has retired.  Closes: #920506
+
+  [ Thomas Goirand ]
+  * Removed Python 2 support.
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 28 Mar 2019 20:57:14 +0100
+
+testrepository (0.0.20-3) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * d/copyright: Use https protocol in Format field
+  * d/watch: Use https protocol
+
+  [ Thomas Goirand ]
+  * Ran wrap-and-sort -bast.
+  * Add missing dh-python build-depends.
+  * Standards-Version is now 4.1.3.
+  * Updated build-depends version and bumped debhelper to 10.
+
+ -- Thomas Goirand <zigo@debian.org>  Mon, 02 Apr 2018 17:01:33 +0200
+
+testrepository (0.0.20-2) unstable; urgency=medium
+
+  * Switch debian/watch to pypi.debian.net redirector.
+  * Bump S-V to 3.9.6.
+
+ -- Tristan Seligmann <mithrandi@debian.org>  Sun, 09 Aug 2015 19:52:16 +0200
+
+testrepository (0.0.20-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Fix ordering of paragraphs in debian/copyright.
+
+ -- Tristan Seligmann <mithrandi@debian.org>  Sat, 13 Sep 2014 19:57:12 +0200
+
+testrepository (0.0.18-5) unstable; urgency=medium
+
+  * Correct license information in debian/copyright; testrepository is
+    dual-licensed under Apache 2 / 3-clause BSD (closes: #743854).
+    - Thanks to Thorsten Alteholz for the bug report.
+  * Upstream source has moved to github.
+  * Switch to ASCII-armored upstream keyring in debian/upstream/.
+  * Switch back to pybuild.
+  * Add a lintian override for the update-alternatives warning.
+
+ -- Tristan Seligmann <mithrandi@debian.org>  Sat, 03 May 2014 17:49:00 +0200
+
+testrepository (0.0.18-4) unstable; urgency=medium
+
+  * Disabled the unit tests again.
+
+ -- Thomas Goirand <zigo@debian.org>  Sat, 12 Apr 2014 16:58:02 +0000
+
+testrepository (0.0.18-3) unstable; urgency=medium
+
+  * Added VCS fields.
+  * Added Python 3.x support.
+  * The python{3,}-testrepository are now providing the /usr/bin/testr
+    executable, which is installed using update-alternatives.
+  * Going back to using dh_python{2,3} instead of pybuild (Tristan: if you know
+    how to do what I'm doing with pybuild, let me know...).
+  * Reactivated the test suite.
+
+ -- Thomas Goirand <zigo@debian.org>  Fri, 21 Mar 2014 22:44:51 +0800
+
+testrepository (0.0.18-2) unstable; urgency=medium
+
+  * Add missing build dependency on dh-python (closes: #738414).
+    - Thanks to Hideki Yamane for the patch.
+
+ -- Tristan Seligmann <mithrandi@debian.org>  Fri, 21 Feb 2014 14:16:40 +0200
+
+testrepository (0.0.18-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Set PAPT as Maintainer. (Previously DPMT was set as Maintainer, but the
+    package was not actually in DPMT SVN, and PAPT is the correct team for an
+    application)
+  * Add myself to Uploaders.
+  * Bump Standards-Version to 3.9.5 (no changes needed).
+  * Switch to pybuild, and remove various unneeded leftovers.
+  * Add signature checking to watch file.
+  * Install upstream NEWS file.
+
+ -- Tristan Seligmann <mithrandi@debian.org>  Wed, 15 Jan 2014 22:16:32 +0200
+
+testrepository (0.0.17-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Thomas Goirand <zigo@debian.org>  Sat, 20 Jul 2013 06:09:43 +0000
+
+testrepository (0.0.14-2) unstable; urgency=low
+
+  * Added missing build-depends: python-setuptools.
+  * Ran wrap-and-sort to clean debian/control.
+  * Removed X-Python-Version: >= 2.6 which now makes no sense.
+
+ -- Thomas Goirand <zigo@debian.org>  Sat, 01 Jun 2013 06:27:20 +0000
+
+testrepository (0.0.14-1) unstable; urgency=low
+
+  * New upstream release.
+  * Now using format 1.0 parsable debian/copyright.
+  * Switched from CDBS to dh_python2.
+  * Now using compat and debhelper 9.
+  * Now using python module team as maintainer. Added myself as uploader.
+  * Switching to 3.0 (quilt) format.
+  * Bumped Standard-Version to 3.9.4.
+  * Fixed Homepage: filed to use the pypi website.
+  * Added a watch file.
+
+ -- Thomas Goirand <zigo@debian.org>  Fri, 22 Feb 2013 14:28:42 +0000
+
+testrepository (0.0.5-1.1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Make python-testrepository depend on python-subunit (closes: #576957).
+    Thanks to Jelmer Vernooij for the bug report.
+
+ -- Jakub Wilk <jwilk@debian.org>  Fri, 26 Aug 2011 21:26:45 +0200
+
+testrepository (0.0.5-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Robert Collins <robertc@robertcollins.net>  Sat, 26 Feb 2011 20:22:14 +1300
+
+testrepository (0.0.4-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Robert Collins <robertc@robertcollins.net>  Sun, 12 Sep 2010 08:48:03 +1200
+
+testrepository (0.0.3-1) unstable; urgency=low
+
+  * First debian upload. Closes: #571888
+  * New upstream release.
+
+ -- Robert Collins <robertc@robertcollins.net>  Sun, 28 Feb 2010 22:41:55 +1100
+
+python-testrepository (0.0.2-2) unstable; urgency=low
+
+  * Grab upstream improvements.
+
+ -- Robert Collins <robertc@robertcollins.net>  Sun, 07 Feb 2010 22:20:18 +1100
+
+python-testrepository (0.0.2-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Robert Collins <robertc@robertcollins.net>  Sun, 10 Jan 2010 22:32:57 +1100
+
+python-testrepository (0.0.1-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Robert Collins <robertc@robertcollins.net>  Sun, 10 Jan 2010 22:16:09 +1100

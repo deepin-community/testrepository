@@ -1,0 +1,3 @@
+# Lintian complains about the update-alternatives use in postrm, but the case
+# it mentions is covered by the invocation in prerm:
+python-testrepository binary: postrm-removes-alternative postrm:6
